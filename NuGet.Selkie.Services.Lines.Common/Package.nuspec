@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package >
+
+<package>
   <metadata>
     <id>Selkie.Services.Lines.Common</id>
     <version>1.0.0</version>
@@ -21,11 +22,11 @@
     <licenseUrl>https://github.com/tschroedter/Selkie.Services.Lines.Common/blob/master/LICENSE</licenseUrl>
     <copyright>Copyright Thomas Schroedter 2015</copyright>
     <dependencies>
-        <group targetFramework="net40">
-          <dependency id="log4net" version="1.2.10" />
-        </group>
-        <group targetFramework="net45">
-        </group>
+      <group targetFramework="net40">
+        <dependency id="log4net" version="1.2.10" />
+      </group>
+      <group targetFramework="net45">
+      </group>
     </dependencies>
     <references></references>
     <tags>Selkie</tags>

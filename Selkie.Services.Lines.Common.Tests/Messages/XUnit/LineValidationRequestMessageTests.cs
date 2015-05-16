@@ -34,10 +34,11 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
         [Fact]
         public void LineDtosRoundtripTest()
         {
-            LineDto[] dtos = {
-                                 new LineDto(),
-                                 new LineDto()
-                             };
+            LineDto[] dtos =
+            {
+                new LineDto(),
+                new LineDto()
+            };
 
             m_Sut.LineDtos = dtos;
 

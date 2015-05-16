@@ -49,7 +49,7 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
         [Fact]
         public void LineDtosRoundtripTest()
         {
-            LineDto[] dtos = new LineDto[0];
+            var dtos = new LineDto[0];
 
             m_Sut.LineDtos = dtos;
 
