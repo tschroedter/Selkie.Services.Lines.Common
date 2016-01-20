@@ -6,7 +6,7 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
 {
     [ExcludeFromCodeCoverage]
     //ncrunch: no coverage start
-    internal sealed class TestLineRequestMessageTests
+    public sealed class TestLineRequestMessageTests
     {
         private readonly TestLineRequestMessage m_Sut;
         private readonly TestLineType.Type[] m_Types;
@@ -34,6 +34,18 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
         public void TypesDefaultTest()
         {
             Assert.True(m_Types == m_Sut.Types);
+        }
+
+        [Fact]
+        public void Message_Json_Roundtrip()
+        {
+            // Arrange
+            // Act
+            TestLineRequestMessage actual = JsonHelper.RoundtripJsonEncodeDecode(m_Sut);
+
+            // Assert
+            Assert.Equal(m_Sut.Types.Length,
+                         actual.Types.Length);
         }
     }
 }

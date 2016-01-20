@@ -44,5 +44,17 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
 
             Assert.True(dtos == m_Sut.LineDtos);
         }
+
+        [Fact]
+        public void Message_Json_Roundtrip()
+        {
+            // Arrange
+            // Act
+            LineValidationRequestMessage actual = JsonHelper.RoundtripJsonEncodeDecode(m_Sut);
+
+            // Assert
+            Assert.Equal(m_Sut.LineDtos.Length,
+                         actual.LineDtos.Length);
+        }
     }
 }

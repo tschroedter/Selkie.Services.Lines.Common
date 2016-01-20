@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\LineDto.cs" />
+    <Compile Include="Messages\ImportGeoJsonTextRequestMessage.cs" />
+    <Compile Include="Messages\ImportGeoJsonTextResponseMessage.cs" />
     <Compile Include="Messages\LineValidationRequestMessage.cs" />
     <Compile Include="Messages\LineValidationResponseMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

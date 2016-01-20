@@ -226,6 +226,8 @@ function Publish {
 		Write-Log "Repository Url: $url"
 		Write-Log " "
 
+		Write-Log "...ignored because Bamboo does it!"
+		<#
 		Get-ChildItem *.nupkg | Where-Object { $_.Name.EndsWith(".symbols.nupkg") -eq $false } | ForEach-Object { 
 
 			# Try to push package
@@ -246,7 +248,9 @@ function Publish {
 				$global:ExitCode = 0
 			}                
 		}
+		#>
 	}
+	$global:ExitCode = 0
 }
 
 Write-Log " "

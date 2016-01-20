@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using JetBrains.Annotations;
 using Selkie.Services.Lines.Common.Dto;
+using Selkie.Services.Lines.Common.Tests.Messages.XUnit;
 using Xunit;
 
 namespace Selkie.Services.Lines.Common.Tests.Dto.XUnit
@@ -67,5 +69,39 @@ namespace Selkie.Services.Lines.Common.Tests.Dto.XUnit
         {
             Assert.True(Math.Abs(4.0 - m_Sut.Y2) < Tolerance);
         }
+
+        [Fact]
+        public void Dto_Json_Roundtrip()
+        {
+            // Arrange
+            // Act
+            LineDto actual = JsonHelper.RoundtripJsonEncodeDecode(m_Sut);
+
+            // Assert
+            AssertLineDtos(m_Sut,
+                           actual);
+        }
+
+        // ReSharper disable UnusedParameter.Local
+        private void AssertLineDtos([NotNull] LineDto expected,
+                                    [NotNull] LineDto actual)
+        {
+            Assert.True(expected.Id == actual.Id,
+                        "Id");
+            Assert.True(expected.IsUnknown == actual.IsUnknown,
+                        "IsUnknown");
+            Assert.True(expected.RunDirection == actual.RunDirection,
+                        "RunDirection");
+            Assert.True(Math.Abs(expected.X1 - actual.X1) < 0.1,
+                        "X1");
+            Assert.True(Math.Abs(expected.Y1 - actual.Y1) < Tolerance,
+                        "Y1");
+            Assert.True(Math.Abs(expected.X2 - actual.X2) < Tolerance,
+                        "X2");
+            Assert.True(Math.Abs(expected.Y2 - actual.Y2) < Tolerance,
+                        "Y2");
+        }
+
+        // ReSharper restore UnusedParameter.Local
     }
 }
