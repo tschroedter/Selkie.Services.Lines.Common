@@ -6,23 +6,23 @@ namespace Selkie.Services.Lines.Common.Tests.Messages.XUnit
 {
     [ExcludeFromCodeCoverage]
     //ncrunch: no coverage start
-    public sealed class ImportGeoJsonTextRequestMessageTests
+    public sealed class ImportGeoJsonFromTextRequestMessageTests
     {
         [Fact]
         public void Message_Json_Roundtrip()
         {
             // Arrange
-            var sut = new ImportGeoJsonTextRequestMessage
+            var sut = new ImportGeoJsonFromFileRequestMessage
                       {
-                          Text = "Test"
+                          Filename = "Test"
                       };
 
             // Act
-            ImportGeoJsonTextRequestMessage actual = JsonHelper.RoundtripJsonEncodeDecode(sut);
+            ImportGeoJsonFromFileRequestMessage actual = JsonHelper.RoundtripJsonEncodeDecode(sut);
 
             // Assert
-            Assert.Equal(sut.Text,
-                         actual.Text);
+            Assert.Equal(sut.Filename,
+                         actual.Filename);
         }
     }
 }
