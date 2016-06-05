@@ -53,14 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\XUnit\LineDtoTests.cs" />
-    <Compile Include="Messages\XUnit\ImportGeoJsonTextRequestMessageTests.cs" />
-    <Compile Include="Messages\XUnit\ImportGeoJsonTextResponseMessageTests.cs" />
-    <Compile Include="Messages\XUnit\JsonHelper.cs" />
-    <Compile Include="Messages\XUnit\LineValidationRequestMessageTests.cs" />
-    <Compile Include="Messages\XUnit\LineValidationResponseMessageTests.cs" />
-    <Compile Include="Messages\XUnit\TestLineRequestMessageTests.cs" />
-    <Compile Include="Messages\XUnit\TestLineResponseMessageTests.cs" />
+    <Compile Include="Dto\LineDtoTests.cs" />
+    <Compile Include="Messages\ImportGeoJsonTextRequestMessageTests.cs" />
+    <Compile Include="Messages\ImportGeoJsonTextResponseMessageTests.cs" />
+    <Compile Include="Messages\JsonHelper.cs" />
+    <Compile Include="Messages\LineValidationRequestMessageTests.cs" />
+    <Compile Include="Messages\LineValidationResponseMessageTests.cs" />
+    <Compile Include="Messages\TestLineRequestMessageTests.cs" />
+    <Compile Include="Messages\TestLineResponseMessageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
