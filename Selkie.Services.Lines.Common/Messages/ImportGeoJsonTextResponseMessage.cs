@@ -1,5 +1,5 @@
 ﻿using JetBrains.Annotations;
-using Selkie.Services.Lines.Common.Dto;
+using Selkie.Services.Common.Dto;
 
 namespace Selkie.Services.Lines.Common.Messages
 {
@@ -8,6 +8,6 @@ namespace Selkie.Services.Lines.Common.Messages
     {
         [NotNull]
         [UsedImplicitly]
-        public LineDto[] LineDtos = new LineDto[0];
+        public SurveyGeoJsonFeatureDto[] Dtos = new SurveyGeoJsonFeatureDto[0];
     }
 }
