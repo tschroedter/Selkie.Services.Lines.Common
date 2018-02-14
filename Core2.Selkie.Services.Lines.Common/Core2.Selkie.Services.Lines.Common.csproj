@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Description>This package contains the common message published and received by the service 'Selkie.Services.Lines'.</Description>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © Thomas Schroedter 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/tschroedter/Selkie.Services.Lines.Common/blob/dotnetcore2/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/tschroedter/Selkie.Services.Lines.Common/tree/dotnetcore2</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/tschroedter/Selkie/blob/master/LaptopDeskPerson.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/tschroedter/Selkie.Services.Lines.Common/tree/dotnetcore2</RepositoryUrl>
+    <PackageTags>Selkie Services Lines Common Core2</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core2.Selkie.Services.Common.Dto" Version="1.0.1" />
+    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
+  </ItemGroup>
+
+</Project>
